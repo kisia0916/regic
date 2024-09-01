@@ -1,8 +1,27 @@
 const express = require("express")
 const path = require("path")
 const app = express()
+const dotenv = require("dotenv")
+dotenv.config()
+const basicAuth = require("express-basic-auth")
 
+const EnvUserName = process.env.AUTHNAME
+const EnvPass = process.env.AUTHPASS
+
+
+app.use(basicAuth({
+    challenge:true,
+    unauthorizedResponse:()=>{
+        return "Unauthorized"
+    },
+    authorizer:(username,password)=>{
+        const userMatch = basicAuth.safeCompare(username,String(EnvUserName))
+        const passMatch = basicAuth.safeCompare(password,String(EnvPass))
+        return userMatch && passMatch
+    }
+}))
 app.use(express.static(path.join('public')));
+
 
 app.get("/",(req,res)=>{
     const filePath = path.join(__dirname, 'public', 'index.html');
