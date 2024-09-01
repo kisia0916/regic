@@ -9,7 +9,7 @@ const EnvUserName = process.env.AUTHNAME
 const EnvPass = process.env.AUTHPASS
 
 
-app.use(basicAuth({
+/**app.use(basicAuth({
     challenge:true,
     unauthorizedResponse:()=>{
         return "Unauthorized"
@@ -19,7 +19,7 @@ app.use(basicAuth({
         const passMatch = basicAuth.safeCompare(password,String(EnvPass))
         return userMatch && passMatch
     }
-}))
+}))**/
 app.use(express.static(path.join('public')));
 
 
