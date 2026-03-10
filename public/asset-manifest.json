@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "./static/css/main.a282189f.css",
-    "main.js": "./static/js/main.48b7f3d4.js",
+    "main.js": "./static/js/main.971ab1ac.js",
     "static/media/AgaveNerdFont-Regular.ttf": "./static/media/AgaveNerdFont-Regular.190e50ea4b6d9d7ce0c2.ttf",
     "index.html": "./index.html",
     "main.a282189f.css.map": "./static/css/main.a282189f.css.map",
-    "main.48b7f3d4.js.map": "./static/js/main.48b7f3d4.js.map"
+    "main.971ab1ac.js.map": "./static/js/main.971ab1ac.js.map"
   },
   "entrypoints": [
     "static/css/main.a282189f.css",
-    "static/js/main.48b7f3d4.js"
+    "static/js/main.971ab1ac.js"
   ]
 }
